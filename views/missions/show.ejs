@@ -3,18 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mars Missions</title>
+    <title><%= marsMissions[mission].name %></title>
 </head>
 <body>
-    <h1>Missions to Mars</h1>
-    <ul>
-   <% for (let i = 0; i < marsMissions.length; i++) { %>
-        <li>
-            <a href="/<%= i %>">
-             <%= marsMissions[i].name %>
-            </a>
-        </li>
-    <% } %>
-    </ul>
+    <h1><%= marsMissions[mission].name %></h1>
+  <div>
+     Launch Date: <%= marsMissions[mission].launchDate %>
+  </div>
+  <div>
+     Operator: <%= marsMissions[mission].operator %>
+  </div>
+  <div>
+     Mission Type: <%= marsMissions[mission].missiontype %>
+  </div>
 </body>
 </html>

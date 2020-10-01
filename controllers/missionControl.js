@@ -7,7 +7,11 @@ router.get('/', (req, res) => {
 });
 
 router.get('/:mission', (req, res) => {
-    res.render('show', {marsMissions: marsMissions})
+    let mission = req.params.mission;
+    res.render('missions/show', {
+        marsMissions: marsMissions,
+        mission: mission
+    })
 })
 
 module.exports = router;
