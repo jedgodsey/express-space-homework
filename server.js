@@ -1,12 +1,22 @@
 // DEPENDENCIES
 const express = require('express');
 const app = express();
-const marsMissions = require('./models/marsMissions.js')
+const marsMissions = require('./models/marsMissions.js');
+const bodyParser = require('body-parser')
 
 // Set View Engine
 app.set('view engine', 'ejs');
 
+// use Body parser
+app.use(bodyParser.urlencoded({extended: false}));
 
+// Set controller
+const missionControl = require('./controllers/missionControl.js')
+
+// Use controller
+app.use('/', missionControl);
+
+// Use con
 // * Your mission is to complete the app
 // * The app will need routes for index and show
 // * The app will need views for index and show
@@ -20,7 +30,6 @@ app.set('view engine', 'ejs');
 
 // PORT
 const port = 3000;
-
 
 // INDEX Route
 // send data to 'missions/index.ejs' view
