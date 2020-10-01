@@ -14,7 +14,7 @@ app.set('view engine', 'ejs');
 const missionControl = require('./controllers/missionControl.js');
 
 // Use controller
-app.use('/', missionControl);
+app.use('/missions', missionControl);
 
 // * Bonus/Hungry for More: add static css to style the pages (google how)
 
