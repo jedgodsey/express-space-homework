@@ -1,11 +1,11 @@
 // DEPENDENCIES
 const express = require('express');
 const app = express();
+const marsMissions = require('./models/marsMissions.js')
 
 // Set View Engine
 app.set('view engine', 'ejs');
 
-// run `npm install` to install dependencies in package.json
 
 // * Your mission is to complete the app
 // * The app will need routes for index and show
@@ -17,16 +17,9 @@ app.set('view engine', 'ejs');
 // * Bonus/Hungry for More: add images to the data and have them display (google how)
 // * Bonus/Hungry for More: add static css to style the pages (google how)
 
-// NOTES:
-// ejs has not been installed
-// views folder has not been created
-// views/missions folder has not been created
 
 // PORT
 const port = 3000;
-
-// DATA - put into marsMissions.js file inside of a models folder, for module.exports
-// remember to require it in the server
 
 
 // INDEX Route
